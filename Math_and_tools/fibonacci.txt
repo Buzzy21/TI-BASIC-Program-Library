@@ -1,0 +1,17 @@
+# Generates the Xth to the Yth numbers from the fibonacci sequence
+Prompt X
+Prompt Y 
+
+0->A
+0->B
+
+For(I,0,Y,1)
+If I>=X
+Then 
+Disp A
+End
+
+A+B->C
+B->A
+C->B
+End

@@ -1,0 +1,12 @@
+// Calculate the distance between two points
+
+// x and y axes of the first point
+Prompt A
+Prompt B
+// x and y axes of the second point
+Prompt C
+Prompt D
+
+(A-C)^2+(B-D)^2->V
+
+Disp √(V)

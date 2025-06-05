@@ -1,0 +1,44 @@
+// This program takes in a pure radical (inputted as an integer) and outputs its simplest form
+
+// A is the inner radical 
+Prompt A
+// B is the outside coefficient
+1->B
+
+-1->Q
+While Q!=1
+
+If √(A)=int(√(A)) // 
+Then
+B*√(A)->B
+1->A
+Goto E // E is a label at the end
+End
+
+1->Q
+For(C,int(√(A))+1,1,-1)
+
+// Check if C works as a perfect square divisor
+If remainder(A,C)=0 and √(C)=int(√(C))
+Then
+max(C,Q)->Q
+End
+
+// Check if A/C works as a perfect square divisor
+int(A/C)->G
+If remainder(A,G)=0 and √(G)=int(√(G))
+Then
+max(G,Q)->Q
+
+End
+End
+
+A/Q->A  // Perfect square divided from the radical 
+B*√(Q)->B // Coefficient gets multiplied by the sqrt of the perfect square
+
+End
+
+Lbl E
+
+Disp B
+Disp A
