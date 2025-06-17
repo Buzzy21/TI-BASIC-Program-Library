@@ -1,9 +1,12 @@
+// The number to factor
 Prompt N
 
+// empty lists cannot be created, so 1 is used as buffer in list
 {1}->L₁
 
 2->I
 
+// keeps looking for larger numbers to divide into N, eventually bringing N to 1. The numbers which divided were stored in L₁
 While N>1
 If remainder(N,I)=0
 Then
@@ -15,4 +18,5 @@ End
 
 End
 
+// display the list without the original buffer
 Disp seq(L₁(J),J,2,dim(L₁))
