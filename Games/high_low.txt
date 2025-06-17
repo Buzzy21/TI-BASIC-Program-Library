@@ -1,0 +1,48 @@
+// N is number of different numbers available
+// C: -1, 0, 1 are choices (lower, same, higher), 2 is to stop
+// S is score, 1/S is the probability of you having gotten it correct in that way
+// Losing sets score to 0, stops game
+
+Prompt N
+1->S
+randInt(1,N)->P
+Disp P
+Prompt C
+
+While C≠2
+randInt(1,N)->Q
+
+Disp Q
+
+If Q>P and C=1
+Then
+S*N/(N-P)->S
+Disp "SCORE:",int(S)
+
+Else
+If Q=P and C=0
+Then
+S*N->S
+Disp "SCORE:",int(S)
+
+Else
+If Q<P and C=-1
+Then
+S*N/(P-1)->S
+Disp "SCORE:",int(S)
+
+Else
+Disp "INCORRECT"
+Goto Z
+End
+End
+
+Q->P
+Prompt C
+End
+
+Disp "FINAL SCORE:", int(S)
+Stop
+
+Lbl Z
+Disp "FINAL SCORE:", 0
