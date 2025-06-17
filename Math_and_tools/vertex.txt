@@ -1,0 +1,15 @@
+// this program finds the vertex of a quadratic y=ax^2+bx+c
+
+Prompt A
+Prompt B
+Prompt C
+
+If A=0
+Then
+Disp "NOT A REAL QUADRATIC"
+Stop
+
+Else
+Disp -B/(2*A)
+Disp C-B^2/(4*A)
+End
