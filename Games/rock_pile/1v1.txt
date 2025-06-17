@@ -1,0 +1,30 @@
+Prompt N
+N->M
+
+0->T
+While N>0
+If T = 0
+Then
+1->T
+Else
+0->T
+End
+ 
+int(N/2)+int(M/4)->J
+randInt(1,min(N,J))->X
+randInt(X+1,N)->Y
+Disp "LEFT",N,"RANGE",X,Y
+
+Prompt G
+max(G,X)->G
+min(G,Y)->G
+N-G->N
+
+End
+
+If T=0:
+Then
+Disp "Player 0 WON!"
+Else
+Disp "Player 1 WON!"
+End
