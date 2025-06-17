@@ -1,0 +1,32 @@
+// solves for roots using the of a quadratic equation ax^2+bx+c using the quadratic formula
+
+Prompt A
+Prompt B
+Prompt C
+
+4*A*C->D
+If B^2<D
+Then
+Input "a+bi? (1/0)",E
+If E=1
+Then
+Disp "TWO COMPLEX CONJUGATES"
+Goto F
+Else
+Disp "NO REAL SOLUTIONS"
+End
+
+Else
+If B^2=D
+Then
+Disp "ONE SOLUTION",-B/(2*A)
+Else
+Disp "TWO SOLUTIONS"
+Goto F
+End
+
+End
+Stop
+
+Lbl F
+Disp (√(B^2-D)-B)/(2*A),(-B-√(B^2-D))/(2*A)
