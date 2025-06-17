@@ -1,0 +1,71 @@
+// D is number of decks
+0->D
+
+While D<1 or D>8 or int(D)≠D
+Prompt D
+End
+
+// note that they are kept in shuffled order throughout the game, pausing the code to check the list will be considered cheating
+remainder(randIntNoRepeat(1,52*D,21),13)->L₁
+
+0->S
+0->C
+
+While S<21
+Input "Hit or Stand? (1/0) ",H
+
+If H=1
+Then
+
+S+10->S
+
+If L₁(1)=0
+Then
+Disp "K"
+Else
+
+If L₁(1)=1
+Then
+Disp "A"
+S-9->S
+C+1->C
+Else
+
+If L₁(1)=11
+Then
+Disp "J"
+Else
+
+If L₁(1)=12
+Then
+Disp "Q"
+
+Else
+Disp L₁(1)
+S+L₁(1)-10->S
+
+End
+End
+End
+End
+
+seq(L₁(I),I,2,dim(L₁))->L₁
+
+Else
+Goto X
+End
+End
+
+Lbl X
+If S<=21
+Then
+
+While S<=11 and C>0
+S+10->S
+C-1->C
+End
+
+Disp "SCORE",S
+Else
+Disp "BUST"
+End
