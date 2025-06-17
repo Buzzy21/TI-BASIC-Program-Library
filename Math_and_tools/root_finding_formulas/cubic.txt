@@ -1,4 +1,4 @@
-// solves for the roots of a cubic ax^3+bx^2+cx+d using the cubic formula (has been shortened by using variables for multiple parts)
+// solves for the real root of a cubic ax^3+bx^2+cx+d using the cubic formula (has been shortened by using variables for multiple parts)
 Prompt A
 Prompt B
 Prompt C
