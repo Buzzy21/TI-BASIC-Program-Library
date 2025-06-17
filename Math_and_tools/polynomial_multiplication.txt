@@ -1,0 +1,28 @@
+// A is the degree of the first polynomial, whose coefficients are stored in L₁, constant first
+Prompt A
+seq(0,I,0,A)->L₁
+For(I,1,A+1)
+Input "A Coef",X
+X->L₁(I)
+End
+
+// B is the degree of the second polynomial, whose coefficients are stored in L₂, constant first
+Prompt B
+seq(0,I,0,B)->L₂
+For(I,1,B+1)
+Input "B Coef",X
+X->L₂(I)
+End
+
+// L₃ is initialzed and added to, using the "distribute and add" method
+seq(0,I,1,A+B+1)->L₃
+
+For(I,1,A+1)
+For(J,1,B+1)
+L₃(I+J-1)+L₁(I)*L₂(J)->L₃(I+J-1)
+End
+End
+
+// L₃ is returned
+Disp "PRODUCT:"
+Disp L₃
