@@ -1,0 +1,35 @@
+Prompt N
+N->M
+
+1->T
+While N>0
+
+int(N/2)+int(M/4)->J
+randInt(1,min(N,J))->X
+randInt(X+1,N)->Y
+Disp "LEFT",N,"RANGE",X,Y
+
+If T=1
+Then
+0->T
+Prompt G
+max(G,X)->G
+min(G,Y)->G
+N-G->N
+
+Else
+1->T
+If Y>=N
+Then
+Disp "THE BOT WON"
+Stop
+End
+
+randInt(X,Y)->G
+Disp "BOT CHOSE",G
+N-G->N
+
+End
+End
+
+Disp "YOU WON"
