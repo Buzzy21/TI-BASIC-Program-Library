@@ -1,0 +1,21 @@
+Prompt M
+randInt(1,M)->N
+0->G
+0->C
+
+While G≠N
+Prompt G
+
+If G>N
+Then
+Disp "TOO HIGH"
+
+Else
+If G<N
+Then
+Disp "TOO LOW"
+End
+End
+
+End
+Disp "CORRECT"
