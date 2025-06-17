@@ -1,0 +1,13 @@
+// converts a quadratic in standard form y=ax^2+bx+c into vertex form y=a(x-h)^2+k
+
+Prompt A
+Prompt B
+Prompt C
+
+If A=0
+Then
+Disp "NOT QUADRATIC"
+
+Else
+Disp "A:",A, "H:",-B/(2*A), "K:",C-B^2/(4*A)
+End
