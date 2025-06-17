@@ -1,0 +1,25 @@
+// in this game, you just type 0. Typing another number will end the run
+// the first prompt asks if you already have an amount saved in the variable V (0 means stored, 1 means new, 2 means store a new number to start)
+
+Prompt P
+
+If P=0
+Then
+Disp V
+Else
+
+If P=1
+Then
+0->V
+Else
+Prompt V
+End
+
+End
+
+Prompt P
+While P=0
+V+1->V
+Disp V
+Prompt P
+End
