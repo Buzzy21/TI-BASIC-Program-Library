@@ -1,0 +1,8 @@
+// finds the slope of a line using 2 points: (A,B) and (C,D)
+
+Prompt A
+Prompt B
+Prompt C
+Prompt D
+
+Disp (D-B)/(C-A)
