@@ -1,0 +1,16 @@
+// solves for the roots of a cubic ax^3+bx^2+cx+d using the cubic formula (has been shortened by using variables for multiple parts)
+Prompt A
+Prompt B
+Prompt C
+Prompt D
+
+If A=0
+Then
+Disp "NOT A VALID CUBIC"
+End
+
+-B/(3*A)->H
+C/(3*A)-H*H->G
+H^3-(C*H+D)/(2*A)->F
+
+Disp ∛(F+√(F^2+G^3)+∛(F-√(F^2+G^3))-H
