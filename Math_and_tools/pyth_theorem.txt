@@ -1,0 +1,23 @@
+// This program uses the pythagorean theorem to find the third side of a right triangle given the other 2 sides
+// if N is 1, you're giving both legs, otherwise A is hypotenuse and B is a leg
+Prompt N
+
+// A should be hypotenuse if you are using one
+Prompt A
+Prompt B
+
+If N = 1
+Then
+
+Disp "√(", A^2+B^2
+Disp √(A^2+B^2)
+
+End
+
+If N = 2
+Then
+
+Disp "√(", A^2-B^2
+Disp √(A^2-B^2)
+
+End
