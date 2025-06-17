@@ -1,0 +1,34 @@
+// N is the dividend degree, M is the divisor degree
+Prompt N
+Prompt M
+
+// Store dividend in L₁, constant first
+seq(0,I,0,N)->L₁
+For(I,1,N+1)
+Input "Dividend Coef",X
+X->L₁(I)
+End
+
+// Store divisor in L₂, constant first
+seq(0,I,0,M)->L₂
+For(I,1,M+1)
+Input "Divisor Coef",X
+X->L₂(I)
+End
+
+// initialize L₃ (quotient) and L₄ (remainder)
+seq(0,I,0,N-M)->L₃
+L₁->L₄
+
+// calculate quotient and remainder
+For(I,1,N-M+1)
+L₄(I)/L₂(1)->C
+C->L₃(I)
+
+For(J,0,M)
+L₄(I+J)-C*L₂(J+1)->L₄(I+J)
+End
+End
+
+// display L₃ and L₄
+Disp "QUOTIENT:", L₃, "REMAINDER:", L₄
