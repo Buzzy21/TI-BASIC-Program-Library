@@ -1,0 +1,28 @@
+// The helper program factors is needed for this
+// To find the possible rational roots of an equation in the form ax^n+mx^n-1...cx+b (you only need a and b)
+// note that this outputs all possible rational roots, not just the correct ones
+
+Prompt A
+Prompt B
+
+N->B
+pgrmFactors
+L₂->L₁
+
+N->A
+pgrmFactors
+
+augment(L₁,seq(1/L₂(I),I,2,dim(L₂)))->L₃
+For(I,2,dim(L₁))
+For(I,2,dim(L₂))
+L₁/L₂->A
+
+If not(contains(L₃,A))
+Then
+augment(L₃,{A,-A})->L₃
+End
+
+End
+End
+
+Disp L₃
