@@ -1,0 +1,52 @@
+Prompt L
+
+If L < 0
+Then 
+randInt (1,1000) -> L
+End
+
+ClrHome
+
+Prompt Q
+ClrHome
+Prompt P
+ClrHome
+
+Disp "The Limit Is:"
+Disp L
+
+If Q > L and P > L
+Then
+Disp "You Both Lose"
+End
+
+If Q < L and P > L
+Then
+Disp "P1 Wins"
+End
+
+If P < L and Q > L
+Then
+Disp "P2 Wins"
+End
+
+If Q > L and P > L
+Then
+
+Else
+If Q > P
+Then
+Disp "P1 Wins"
+End
+
+If Q < P
+Then
+Disp "P1 Wins"
+End
+
+End
+
+Disp Q
+Disp P
+Disp "The Limit Is:"
+Disp L
