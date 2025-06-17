@@ -1,0 +1,7 @@
+// needs factors helper method
+// orders factors by factor pair, with (1,N) being first
+
+Prompt N
+For(I,1,dim(L1))
+Disp(L1(I))
+End
