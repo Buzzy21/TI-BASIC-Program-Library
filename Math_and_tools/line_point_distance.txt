@@ -1,0 +1,9 @@
+// this program finds the distance between a line of the equation AX+BY+C=0 and a point (X,Y)
+
+Prompt A
+Prompt B
+Prompt C
+Prompt X
+Prompt Y
+
+Disp abs(A*X+B*Y+C)/√(A^2+B^2)
