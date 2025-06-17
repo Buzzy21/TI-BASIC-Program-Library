@@ -1,0 +1,18 @@
+Prompt N
+
+{1}->L₁
+
+2->I
+
+While N>1
+If remainder(N,I)=0
+Then
+augment(L₁,I)->L₁
+N/I->N
+Else
+I+1->I
+End
+
+End
+
+Disp seq(L₁(J),J,2,dim(L₁))
