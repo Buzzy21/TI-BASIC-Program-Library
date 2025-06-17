@@ -1,0 +1,10 @@
+// finds the factors of a N, stored in L₁
+{1,N}->L₁
+
+For(I,2,√(N))
+If remainder(N,I)=0
+Then
+augment({I,N/I},L₁)->L₁
+End
+
+End
