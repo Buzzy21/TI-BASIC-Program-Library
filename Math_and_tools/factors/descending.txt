@@ -1,0 +1,8 @@
+// prints factors in descending order, O(N) time complexity
+Prompt N
+For(I,-1,N)
+If remainder(N,I)=0
+Then
+Disp I
+End
+End
