@@ -1,0 +1,50 @@
+// 1 for rock, 2 for paper, 3 for scissors
+
+Prompt P
+
+floor(remainder(P,3))->P
+
+If P=1
+Then
+Disp "ROCK"
+Else
+
+If P=2
+Then
+Disp "PAPER"
+Else
+Disp "SCISSORS"
+End
+
+End
+
+Disp "OPPONENT CHOOSES:"
+randInt(-1,1)+P->N
+
+If N=1
+Then
+Disp "ROCK"
+Else
+
+If remainder(N,3)=2
+Then
+Disp "PAPER"
+
+Else
+Disp "SCISSORS"
+End
+End
+
+If N>P
+Then
+Disp "OPPONENT WINS"
+
+Else
+If N=P
+Then
+Disp "TIE"
+
+Else
+Disp "YOU WIN"
+End
+End
