@@ -1,0 +1,47 @@
+Prompt D
+Prompt G
+
+If G > D
+Disp "INVALID DOOR"
+Stop
+End
+
+randInt(1,D)->N
+
+If G=N
+Then
+randInt(1,D-1)->M
+If M>=G
+Then
+M+1->M
+End
+
+Else
+randInt(1,D-2)->M
+If M>=G
+Then
+M+1->M
+End
+If M>=N
+Then
+M+1->M
+End
+
+End
+
+Disp M
+Input "SWITCH? (1/0)",S
+
+If S=1
+Then
+Prompt G
+End
+
+If G=N
+Then
+Disp "CORRECT!"
+Else
+Disp "INCORRECT"
+End
+
+Disp N
