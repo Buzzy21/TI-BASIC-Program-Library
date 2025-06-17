@@ -1,0 +1,36 @@
+// this program finds the quotient and remainder to polynomial (D=degree) divided by (C-F) using synthetic division
+
+Prompt F
+Prompt C
+Prompt D
+
+If C=0
+Disp ""
+Stop
+End
+
+// store dividend polynomial in L₁, constant first
+Input "Coef: ",X
+{X}->L₁
+For(I,1,D)
+Input "Coef: ",X
+augment(L₁,{X})->L₁
+End
+
+// create quotient polynomial in L₂ and calculate it
+seq(0,I,0,D)->L₂
+
+L₁(1)->L₂(1)
+
+For(I,1,D)
+L₁(I+1) + (F*L₂(I))/C->L₂(I+1)
+End
+
+// display quotient and remainder
+Disp "QUOTIENT:"
+For(I,1,D)
+Disp L₂(I)
+End
+
+Disp "REMAINDER:"
+Disp L₂(D+1)
