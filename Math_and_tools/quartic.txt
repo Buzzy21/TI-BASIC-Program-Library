@@ -1,0 +1,25 @@
+// finds roots to a quartic ax^4+bx^3+cx^2+dx+e using the quartic formula ()
+// make sure you have the a+bi setting enabled for complex roots
+
+Prompt A
+Prompt B
+Prompt C
+Prompt D
+Prompt E
+
+If A=0
+Then
+Disp "NOT A VALID QUARTIC"
+Stop
+End
+
+C^2-3*B*D+12*A*E->J
+2*C^3-9*B*C*D+27*A*D^2+27*B^2*E-72*A*C*E->G
+∛(G+√(-4*J^3+G^2))->F
+B^2/(4*A^2)-2*C/(3*A)+∛(2)*J/(3*A*F)->H
+F/(3*∛(2)*A)->I
+B/(4*A)->K
+√(H+I)->L
+√(H-I+(-B^3+4*A*B*C-8*A^2*D)/(4*A^3*L))->M
+
+Disp -K+(L+M)/2, -K+(L-M)/2, -K-(L+M)/2, -K-(L-M)/2
