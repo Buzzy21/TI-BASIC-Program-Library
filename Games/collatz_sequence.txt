@@ -1,0 +1,11 @@
+Input “NUMBER: “,X
+Disp X
+While X>1
+If remainder(X,2)=0
+Then
+X/2->X
+Else
+3*X+1->X
+End
+Disp X
+End
