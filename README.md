@@ -140,3 +140,6 @@ The keyword\
 **ClrHome**\
 Clears the calculator screen and resets the cursor to (1,1). It is mainly used for graphics, and should normally not be included in Math or tools where the user might need to check other formulas they input.\
 Also, ChatGPT commonly puts ClrHome in things, so programs with ClrHome are more likely to be AI generated than those without.
+
+## Importing Code
+If you have a Calculator with the name CE (for example TI-84 Plus CE), you can connect it to a computer and import programs, apps, and variables. Programs come in `.8xp` files.
